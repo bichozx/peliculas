@@ -5,6 +5,7 @@ const useMovieDetails = () => {
   const fetchMovieDetails = useCallback(async (movieId, onDataLoaded, onError) => {
     try {
       const response = await MovieDetails(movieId);
+      console.log('details',response)
       onDataLoaded(response);  // Llama al callback cuando los datos están cargados
     } catch (err) {
       onError(err.message);  // Llama al callback si hay un error

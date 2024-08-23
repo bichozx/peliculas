@@ -103,7 +103,7 @@ body {
   flex-grow: 1;
 }
 
-.peli-item {
+/* .peli-item {
   flex-grow: 1;
   background: white;
   border-radius: 10px;
@@ -113,6 +113,72 @@ body {
   padding-bottom: 60px;
   padding-left: 25px;
   padding-right: 25px;
+} */
+.peli-item {
+  width: 200px; /* Ajusta el ancho según sea necesario */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.peli-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.movie-info {
+  margin-top: 10px;
+  width: 100%; /* Permite que el texto se alinee más a la izquierda */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  cursor: pointer;
+  color: #333;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.rating-score {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #f39c12; /* Color de la estrella */
+}
+
+.rating-score i {
+  margin-right: 5px;
+  color: #f39c12; /* Color de la estrella */
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.rating-label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-right: 10px;
 }
 
 button,
@@ -336,4 +402,50 @@ input[type='button'] {
   margin-bottom: 10px;
   font-size: 1.2rem;
   text-align: center;
+}
+
+.modal-trailers {
+  margin-top: 20px;
+}
+
+.trailer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.trailer-controls button {
+  background: #0b70e1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.trailer-controls button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.trailer-controls button:hover:not(:disabled) {
+  background: #0a5bcd;
+}
+
+.movie-list {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.rating-circle {
+  width: 70px; /* Ajusta el tamaño del círculo de progreso */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
